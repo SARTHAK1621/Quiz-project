@@ -1,0 +1,67 @@
+img
+{
+    width: fit-content;
+    height: fit-content;
+}
+body
+{
+    font-family: 'Nerko One', cursive;
+    background url(trial.jpeg);
+    height: 100%;
+    background-repeat: repeat;
+}
+.navbar
+    {
+        display: inline-block;
+    }
+    .navbar button
+    {
+        font-family: 'Nerko One', cursive;
+        color:rgb(24, 24, 20);
+        display: inline-block;
+        font-size: 20px;
+        border: 2px solid grey;
+        border-radius: 10px;
+
+    }
+    .navbar button a
+    {
+        color: rgb(26, 26, 24);
+        font-family: 'Nerko One', cursive;
+        text-decoration: none;
+        padding: 5px 0px;
+        border: 2px ;
+        border-radius: 10px;
+    }
+    .navbar button a:hover, .navbar li a.active
+    {
+        font-family: 'Nerko One', cursive;
+        color: rgb(22, 32, 122);
+        text-decoration: underline;
+        padding: 1px 20px;
+        border: 2px ;
+        border-radius: 10px;
+    }
+    .welcome
+    {
+        text-align: center;
+    }
+    /* .credentials
+    {
+        margin: 50%;
+    } */
+    .bts
+    {
+
+        border-radius: 20px;
+        text-align: center;
+        display: block;
+        height: 50px;
+        width: 185px;
+        padding: 1px;
+        border: 2px solid black;
+        margin-top: 10%;
+        margin-left: 500px;
+
+        
+    }
