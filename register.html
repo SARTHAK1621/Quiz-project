@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Registration</title>
+  </head>
+  <link rel="preconnect" href="https://fonts.gstatic.com" />
+  <link rel="stylesheet" href="resgister.css" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Nerko+One&display=swap"
+    rel="stylesheet"
+  />
+  <style>
+    .name {
+      text-align: left;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      flex-flow: row wrap;
+      margin-top: 5%;
+    }
+    .gender {
+      text-align: left;
+    }
+    .skills label input
+    {
+      display: flex;
+      flex-direction: row;
+      margin: 20%;
+    }
+  </style>
+  <body>
+    <div class="container">
+      <h2>Registration Form</h2>
+      <form action="">
+        <div class="form-group name">
+          <label for="inputname" class="title">Name</label>
+          <input type="text" name="Name" placeholder="Name" id="inputname" />
+        </div>
+        <div class="form-group name">
+          <label for="userid" class="title">userid</label>
+          <input type="email" name="userid" placeholder="userid" id="userid" />
+        </div>
+        <div class="form-group name">
+          <label for="emailid" class="title">Emailid</label>
+          <input
+            type="email"
+            name="emailid"
+            placeholder="emailid"
+            id="emailid"
+          />
+        </div>
+        <div class="form-group name">
+          <label for="password" class="title">Password</label>
+          <input
+            type="password"
+            name="password"
+            placeholder="password"
+            id="password"
+          />
+        </div>
+        <div class="form-group name">
+          <label for="age" class="title">Age</label>
+          <input type="number" name="age" placeholder="age" id="age" />
+        </div>
+       <div class="gender">
+         <h3>Gender</h3>
+         <input type="radio" id="male" name="gender" value="male">
+        <label for="male">Male</label>
+        <input type="radio" id="female" name="gender" value="female">
+        <label for="female">Female</label><br>
+       </div>
+       <div class="form-group name">
+        <label for="colegeaddress" class="title">College Address</label>
+        <textarea name="collegeaddress" id="" cols="40" rows="5"></textarea>
+      </div>
+      <div class="form-group name">
+        <label for="branch" class="title">Branch</label>
+        <select name="Branch" id="Branch" required>
+          <option value="CSE">CSE</option>
+          <option value="EEE">EEE</option>
+          <option value="ECE">ECE</option>
+          <option value="AEI">AEI</option>
+        </select>
+      </div>
+      <div class="form-group name gender skills">
+        <label for="skills">Technical Skills :</label>
+      </div>
+      <input type="checkbox" id="C" name="C" value="C">
+      <label for="C">C</label>
+      <input type="checkbox" id="C++" name="C++" value="C++">
+      <label for="C++">C++</label>
+      <input type="checkbox" id="java" name="java" value="java">
+      <label for="java">JAVA</label>
+      <input type="checkbox" id="python" name="python" value="python">
+      <label for="python">Python</label>
+      <div class="name">
+        <label for="resume">Resume : </label>
+        <input type="file" name="resume" id="resume">
+      </div>
+
+        <div class="form-group">
+          <button><a href="">Register</a></button>
+        </div>
+        <div class="form-group">
+          <button type="reset">Reset</button>
+        </div>
+
+        <div></div>
+      </form>
+    </div>
+  </body>
+</html>

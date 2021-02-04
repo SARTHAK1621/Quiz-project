@@ -1,0 +1,139 @@
+body
+{
+    color: black;
+    font-family: 'Nerko One', cursive; 
+    margin: 0px;
+    padding: 0px;
+    background: url("inscription-exam-keyboard-stationary-blue-background-top-view-174694968.jpg");
+    background-size: 100%;
+}
+.left
+{
+    display: inline-block;
+    position: absolute;
+    left : 5%;
+    top: 5%;
+}
+.left img
+{
+    width: 150px;
+}
+.mid
+{
+    display: block;
+    width: 33%;
+    margin: 2% auto;
+}
+.navbar
+{
+    display: inline-block;
+}
+.navbar button
+{
+    font-family: 'Nerko One', cursive;
+    color:rgb(24, 24, 20);
+    display: inline-block;
+    font-size: 20px;
+    border: 2px solid grey;
+    border-radius: 10px;
+}
+.navbar button a
+{
+    color: rgb(26, 26, 24);
+    font-family: 'Nerko One', cursive;
+    text-decoration: none;
+    padding: 5px 0px;
+    border: 2px ;
+    border-radius: 10px;
+}
+.navbar button a:hover, .navbar li a.active
+{
+    font-family: 'Nerko One', cursive;
+    color: rgb(11, 11, 12);
+    text-decoration: underline;
+    padding: 1px 20px;
+    border: 2px ;
+    border-radius: 10px;
+}
+.right
+{
+    position: absolute;
+    right: 5%;
+    top: 5%;
+    display: inline-block;
+    border-radius: 10px ;
+}
+.right input
+{
+    font-family: 'Nerko One', cursive;
+    text-align: center;
+    width: 150px;
+    height: 25px;
+    border-radius: 10px;
+}
+.container
+{
+    border: 4px solid black;
+    border-radius: 10px;
+    margin: 4px;
+    padding: 4px;
+    width: 33%;
+    margin-top: 200px;
+    margin-left: 100px;
+    text-align: center;
+    background-color:white;
+}
+.form-group input
+{
+    font-family: 'Nerko One', cursive;
+    text-align: center;
+    display: block;
+    width: 508px;
+    padding: 4px;
+    border: 3px solid black;
+    margin: 15px auto;
+    font-size: 30px;
+    border-radius: 10px;
+
+}
+.form-group button
+{
+
+    font-family: 'Nerko One', cursive;
+    color:rgb(24, 24, 20);
+    display: inline-block;
+    font-size: 20px;
+    border: 2px solid grey;
+    border-radius: 10px;
+    margin-top: 10px;
+    width: 40%;
+    height: 30%;
+}
+.form-group button a
+{
+    color: rgb(26, 26, 24);
+    font-family: 'Nerko One', cursive;
+    text-decoration: none;
+    padding: 5px 0px;
+    border: 2px ;
+    border-radius: 10px;
+}
+footer
+{
+    position: absolute;
+    bottom: 0px;
+    margin-bottom: 3%;
+    margin-left: 36%;
+}
+.footer
+{
+    margin: auto;
+    font-size: 30px;
+}
+footer a
+{
+    font-size: 20px;
+    color: black;
+    padding: 10px;
+
+}

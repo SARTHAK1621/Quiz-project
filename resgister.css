@@ -1,0 +1,67 @@
+body
+{
+    color: black;
+    font-family: 'Nerko One', cursive; 
+    margin: 0px;
+    padding: 0px;
+    background: url("download.jpeg");
+    background-size: 150%;
+    background-repeat: repeat-y;
+}
+.container
+{
+    border: 4px solid black;
+    border-radius: 10px;
+    margin: 4px;
+    padding: 4px;
+    width: 40%;
+    margin-top: 50px;
+    margin-left: 35%;
+    text-align: center;
+    background-color:white;
+    height: max-content;
+}
+.form-group input
+{
+    font-family: 'Nerko One', cursive;
+    text-align: center;
+    display: block;
+    width: 100%;
+    padding: 4px;
+    border: 3px solid black;
+    margin: 15px auto;
+    font-size: 20px;
+    border-radius: 10px;
+
+}
+.form-group label
+{
+    font-size: 120%;
+}
+.form-group button
+{
+
+    font-family: 'Nerko One', cursive;
+    color:rgb(24, 24, 20);
+    display: block;
+    font-size: 20px;
+    border: 2px solid grey;
+    border-radius: 10px;
+    margin-top: 10px;
+    width: 100%;
+    height: 30%;
+}
+.form-group button a
+{
+    color: rgb(26, 26, 24);
+    font-family: 'Nerko One', cursive;
+    text-decoration: none;
+    padding: 5px 0px;
+    border: 2px ;
+    border-radius: 10px;
+}
+.form-group label
+{
+    text-align: left;
+    margin-left: 0%;
+}
