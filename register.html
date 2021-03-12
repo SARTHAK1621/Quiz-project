@@ -40,7 +40,7 @@
         </div>
         <div class="form-group name">
           <label for="userid" class="title">userid</label>
-          <input type="email" name="userid" placeholder="userid" id="userid" />
+          <input type="text" name="userid" placeholder="userid" id="userid" />
         </div>
         <div class="form-group name">
           <label for="emailid" class="title">Emailid</label>
@@ -87,21 +87,23 @@
       <div class="form-group name gender skills">
         <label for="skills">Technical Skills :</label>
       </div>
+      <div id="skills">
       <input type="checkbox" id="C" name="C" value="C">
       <label for="C">C</label>
-      <input type="checkbox" id="C++" name="C++" value="C++">
+      <input type="checkbox" id="Cpp" name="C++" value="C++">
       <label for="C++">C++</label>
       <input type="checkbox" id="java" name="java" value="java">
       <label for="java">JAVA</label>
       <input type="checkbox" id="python" name="python" value="python">
       <label for="python">Python</label>
+      </div>
       <div class="name">
         <label for="resume">Resume : </label>
         <input type="file" name="resume" id="resume">
       </div>
 
         <div class="form-group">
-          <button><a href="">Register</a></button>
+          <button onclick="registerfun()"><a href="">Register</a></button>
         </div>
         <div class="form-group">
           <button type="reset">Reset</button>
@@ -110,5 +112,26 @@
         <div></div>
       </form>
     </div>
+    <script>
+      function registerfun()
+      {
+        var inputname,userid,emailid,password,age,male,female,Branch,skills,resume;
+        inputname=document.getElementById("inputname").value;
+        userid=document.getElementById("userid").value;
+        emailid=document.getElementById("emailid").value;
+        password=document.getElementById("password").value;
+        age=document.getElementById("age").value;
+        male=document.getElementById("male").value;
+        female=document.getElementById("female").value;
+        Branch=document.getElementById("Branch").value;
+        skills=document.getElementById("skills").value;
+        resume=document.getElementById("resume").value;
+
+        if(userid ==" " || password =="" || inputname == "" || emailid == "" || age == "" || male == "" || female == "" || Branch == "" || skills == "" || resume == "")
+        {
+          alert("All the fields must be filled");
+        }
+      }
+    </script>
   </body>
 </html>
