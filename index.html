@@ -20,10 +20,10 @@
       <!-- mid box for nav bar -->
       <div class="mid">
         <nav class="navbar">
-          <button><a href="">e-Exam</a></button>
+          <button onclick="myfunction1()"><a href="">e-Exam</a></button>
           <button><a href="">Openforum</a></button>
           <button><a href="">e-Repository</a></button>
-          <button><a href="">My Wall</a></button>
+          <button onclick="myfunction1()"><a href="">My Wall</a></button>
         </nav>
       </div>
       <!-- right box for search bar -->
@@ -70,6 +70,17 @@
           alert("All the field must be filled");
         }
       }
+      function myfunction1()
+      {
+        var userid,password;
+        userid=document.getElementById("userid").value;
+        password=document.getElementById("password").value;
+        if(userid ==" " || password =="")
+        {
+          alert("You have to log in first to access this features ");
+        }
+      }
+
     </script>
   </body>
 </html>
