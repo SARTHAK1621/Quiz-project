@@ -24,9 +24,9 @@ app.get("/", function(req,res){
     
 });
 
-app.get("/register.html", function(req,res){
-    console.log("11");
-    res.sendFile(__dirname+"register.html");
+// app.get("/register.html", function(req,res){
+//     console.log("11");
+//     res.sendFile(__dirname+"register.html");
 //     console.log("22");
 //     app.post("/register.html", function(req,res){
 //         console.log("trc784t74b")
@@ -34,9 +34,11 @@ app.get("/register.html", function(req,res){
 //         console.log(req.body);
 //    });
    
-});
+// });
 
-
+app.post("/submit",(req,res)=> {
+    console.log("data submit")
+})
 
 
 
