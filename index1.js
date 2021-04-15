@@ -8,7 +8,7 @@ app.get("/", function(req,res){
     res.sendFile(__dirname+"/index.html");
     // app.post("/", function(req,res){
     //     console.log("trc784t74b")
-     console.log(req.body);
+     //console.log(req.body);
     // });
     app.post("/", function(req,res){
                 console.log("trc784t74b")
@@ -16,11 +16,7 @@ app.get("/", function(req,res){
                 console.log(req.body);
            });
     
-    app.get("/register.html", function(req,res){
-            console.log("4t74b")
-            res.sendFile(__dirname+"/regisster.html");
-            // console.log(req.body);
-       });
+   
     
 });
 
@@ -38,6 +34,16 @@ app.get("/", function(req,res){
 
 app.post("/submit",(req,res)=> {
     console.log("data submit")
+    console.log(req.body.Name);
+    app.get("/submit",(req,res)=> {
+        console.log("data submission page needed");
+    
+    })
+
+})
+app.get("/submit",(req,res)=> {
+    console.log("data submission page needed");
+
 })
 
 
