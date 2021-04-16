@@ -2,6 +2,13 @@ const express = require("express");
 const app = express();
 app.use(express.static("public"));
 app.use(express.urlencoded())
+var mysql = require('mysql');
+var con = mysql.createConnection({
+    host: "localhost",
+    user: "root",
+    password: "",
+    database:"EPORTAL"
+  });
 app.get("/", function(req,res){
     console.log("16429349271");
     
@@ -35,10 +42,8 @@ app.get("/", function(req,res){
 app.post("/submit",(req,res)=> {
     console.log("data submit")
     console.log(req.body.Name);
-    app.get("/submit",(req,res)=> {
-        console.log("data submission page needed");
+    res.sendFile(__dirname+"/acceptancepage.html");
     
-    })
 
 })
 app.get("/submit",(req,res)=> {

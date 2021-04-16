@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>e-Exam</title>
+  </head>
+  <link rel="preconnect" href="https://fonts.gstatic.com" />
+  <link rel="stylesheet" href="index.css" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Nerko+One&display=swap"
+    rel="stylesheet"
+  />
+  <body>
+    <header class="header">
+      <!-- Left box for logo -->
+      <div class="left">
+        <img src="logo4.png" alt="" />
+      </div>
+      <!-- mid box for nav bar -->
+      <div class="mid">
+        <nav class="navbar">
+          <button onclick="myfunction1()"><a href="">e-Exam</a></button>
+          <button><a href="">Openforum</a></button>
+          <button><a href="">e-Repository</a></button>
+          <button onclick="myfunction1()"><a href="">My Wall</a></button>
+        </nav>
+      </div>
+      <!-- right box for search bar -->
+      <div class="right navbar">
+        <input type="text" placeholder="search"/>
+        <button>search</button>
+      </div>
+    </header>
+    <div class="container">
+      <h2>Log In</h2>
+      <form action="/" method="POST">
+        <div class="form-group">
+          <input type="text" name="userid" placeholder="User Id" id="userid" />
+        </div>
+        <div class="form-group">
+          <input type="password" name="password" id="password" placeholder="Password" />
+        </div>
+        <div class="form-group">
+          <button onclick="myfunction()">Log In</button>
+
+        </div>
+        <div class="form-group">
+          <button type="submit"><a href="register.html">Register</a></button>
+
+        </div>
+       
+
+        <div></div>
+      </form>
+    </div>
+    <footer>
+        <div>
+            <a href="" class="footer">FAQ</a>
+            <a href="" class="footer">Contact Us</a>
+            <a href="" class="footer">Rules</a>
+            <a href="" class="footer">Consequenses</a>
+        </div>
+    </footer>
+    <script>
+      function myfunction()
+      {
+        var userid,password;
+        userid=document.getElementById("userid").value;
+        password=document.getElementById("password").value;
+        if(userid ==" " || password =="")
+        {
+          alert("All the field must be filled");
+        }
+      }
+      function myfunction1()
+      {
+        var userid,password;
+        userid=document.getElementById("userid").value;
+        password=document.getElementById("password").value;
+        if(userid ==" " || password =="")
+        {
+          alert("You have to log in first to access this features ");
+        }
+      }
+
+    </script>
+  </body>
+</html>
