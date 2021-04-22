@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>e-Exam</title>
+  </head>
+  <link rel="preconnect" href="https://fonts.gstatic.com" />
+  <link rel="stylesheet" href="index.css" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Nerko+One&display=swap"
+    rel="stylesheet"
+  />
+  <style>
+    .info
+    {
+      margin-top: 5%;
+      margin-left: 15%;
+    }
+  </style>
+  <body>
+    <header class="header">
+      <!-- Left box for logo -->
+      <div class="left">
+        <img src="logo4.png" alt="" />
+      </div>
+      <!-- mid box for nav bar -->
+      <div class="mid">
+        <nav class="navbar">
+          <button><a href="">e-Exam</a></button>
+          <button><a href="">Openforum</a></button>
+          <button><a href="">e-Repository</a></button>
+          <button><a href="/wall">My Wall</a></button>
+        </nav>
+      </div>
+      <!-- right box for search bar -->
+      <div class="right navbar">
+        <input type="text" placeholder="search"/>
+        <button>search</button>
+      </div>
+    </header>
+    <div class="info">
+      <h1 class="heading">Student Info </h1>
+      <h2>Name:  <%=Name%> </h2>
+      <h2>UserID:  <%=Userid%> </h2>
+      <h2>EmailID:  <%=Email%> </h2>
+      <h2>Branch:  <%=Branch%> </h2>
+      <h2>Age:  <%=Age%> </h2>
+      <h2>Address:  <%=Address%> </h2>
+    </div>
+    
+   
+  </body>
+</html>
