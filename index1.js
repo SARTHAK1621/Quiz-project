@@ -19,6 +19,10 @@ var con = mysql.createConnection({
     password: "",
     database:"EPORTAL"
   });
+  con.connect(function(err) {
+    if (err) throw err;
+    console.log("Connected!");
+  });
 app.get("/", function(req,res){
     console.log("16429349271");
     
@@ -30,13 +34,14 @@ app.post("/", function(req,res){
   id=req.body.userid;
   var password=req.body.password;
   console.log(id);
-  con.connect(function(err) {
-    if (err) throw err;
+  
     con.query("SELECT * FROM LOGIN WHERE ID=' "+id+" '", function (err, result, fields) {
       if (err) throw err;
       if(result==" " || result[0].PASSWORD!=password)
       {
         console.log("Wrong credentials");
+        res.sendFile(__dirname+"/invalidloginpage.html"); 
+
       }
       else{
         console.log("Right credentials");
@@ -51,7 +56,6 @@ app.post("/", function(req,res){
           res.render("welcomepage",{Name:name});
         });
       }
-    });
     
   });
   
@@ -71,8 +75,7 @@ app.post("/submit",(req,res)=> {
     var address=req.body.collegeaddress;
     var branch=req.body.Branch;
 
-    con.connect(function(err) {
-        if (err) throw err;
+
         console.log("Connected!");
         var sql = "INSERT INTO LOGIN (ID, Password) VALUES (' "+id+" ','"+password+"')";
         con.query(sql, function (err, result) {
@@ -83,7 +86,6 @@ app.post("/submit",(req,res)=> {
         con.query(sql1, function (err, result) {
           if (err) throw err;
           console.log("1 record inserted");
-        });
 
       });
       res.sendFile(__dirname+"/acceptancepage.html");
@@ -96,9 +98,190 @@ app.get("/wall",(req,res)=> {
   res.render("wallpage",{Name:name,Userid:id,Email:emailid,Age:age,Gender:gender,Address:address,Branch:branch});
   
 })
+app.get("/exam",(req,res)=> {
+  res.render("exam");
+  
+})
+app.get("/dsa",(req,res)=> {
+  
+    con.query("SELECT * FROM DSA", function (err, result, fields) 
+    {
+      if (err) throw err;
+      var qsn1=result[0].QUESTION;
+      var qsn2=result[1].QUESTION;
+      var qsn3=result[2].QUESTION;
+      var qsn4=result[3].QUESTION;
+      var qsn5=result[4].QUESTION;
+      res.render("dsa",{qs1:qsn1,qs2:qsn2,qs3:qsn3,qs4:qsn4,qs5:qsn5});
+    });
+  
+})
+app.get("/dbms",(req,res)=> {
+  con.query("SELECT * FROM DBMS", function (err, result, fields) {
+    if (err) throw err;
+    var qsn1=result[0].QUESTION;
+    var qsn2=result[1].QUESTION;
+    var qsn3=result[2].QUESTION;
+    var qsn4=result[3].QUESTION;
+    var qsn5=result[4].QUESTION;
+    res.render("dbms",{qs1:qsn1,qs2:qsn2,qs3:qsn3,qs4:qsn4,qs5:qsn5});
+  }); 
+  
+  
+})
+app.get("/os",(req,res)=> {
+  con.query("SELECT * FROM OS", function (err, result, fields) {
+    if (err) throw err;
+    var qsn1=result[0].QUESTION;
+    var qsn2=result[1].QUESTION;
+    var qsn3=result[2].QUESTION;
+    var qsn4=result[3].QUESTION;
+    var qsn5=result[4].QUESTION;
+    res.render("os",{qs1:qsn1,qs2:qsn2,qs3:qsn3,qs4:qsn4,qs5:qsn5});
+  });
+  
+  
+})
+app.get("/cn",(req,res)=> {
+  con.query("SELECT * FROM CN", function (err, result, fields) {
+    if (err) throw err;
+    var qsn1=result[0].QUESTION;
+    var qsn2=result[1].QUESTION;
+    var qsn3=result[2].QUESTION;
+    var qsn4=result[3].QUESTION;
+    var qsn5=result[4].QUESTION;
+    res.render("cn",{qs1:qsn1,qs2:qsn2,qs3:qsn3,qs4:qsn4,qs5:qsn5});
+  });
+  
+
+  
+})
+app.post("/cnanswer",(req,res)=> {
+  console.log(req.body);
+  var mark=0;
+  con.query("SELECT * FROM CN", function (err, result, fields) {
+    if (err) throw err;
+    console.log(result);
+    if(result[0].ANSWER == req.body.qs1)
+    {
+      mark+=1;
+    }
+    if(result[1].ANSWER == req.body.qs2)
+    {
+      mark+=1;
+    }
+    if(result[2].ANSWER == req.body.qs3)
+    {
+      mark+=1;
+    }
+    if(result[3].ANSWER == req.body.qs4)
+    {
+      mark+=1;
+    }
+    if(result[4].ANSWER == req.body.qs5)
+    {
+      mark+=1;
+    }
+    console.log(mark);
+    res.render("result",{Mark:mark,Subject:"ComputerNetwork"});
+  });
+  
 
 
+})
+app.post("/dsaanswer",(req,res)=> {
+  console.log(req.body);
+  var mark=0;
+  con.query("SELECT * FROM DSA ", function (err, result, fields) {
+    if (err) throw err;
+    console.log(result);
+    if(result[0].ANSWER == req.body.qs1)
+    {
+      mark+=1;
+    }
+    if(result[1].ANSWER == req.body.qs2)
+    {
+      mark+=1;
+    }
+    if(result[2].ANSWER == req.body.qs3)
+    {
+      mark+=1;
+    }
+    if(result[3].ANSWER == req.body.qs4)
+    {
+      mark+=1;
+    }
+    if(result[4].ANSWER == req.body.qs5)
+    {
+      mark+=1;
+    }
+    console.log(mark);
+    res.render("result",{Mark:mark,Subject:"DSA"});
+  });
 
+})
+app.post("/dbmsanswer",(req,res)=> {
+  console.log(req.body);
+  var mark=0;
+  con.query("SELECT * FROM DBMS ", function (err, result, fields) {
+    if (err) throw err;
+    console.log(result);
+    if(result[0].ANSWER == req.body.qs1)
+    {
+      mark+=1;
+    }
+    if(result[1].ANSWER == req.body.qs2)
+    {
+      mark+=1;
+    }
+    if(result[2].ANSWER == req.body.qs3)
+    {
+      mark+=1;
+    }
+    if(result[3].ANSWER == req.body.qs4)
+    {
+      mark+=1;
+    }
+    if(result[4].ANSWER == req.body.qs5)
+    {
+      mark+=1;
+    }
+    console.log(mark);
+    res.render("result",{Mark:mark,Subject:"DBMS"});
+  });
+
+})
+app.post("/osanswer",(req,res)=> {
+  console.log(req.body);
+  var mark=0;
+  con.query("SELECT * FROM OS ", function (err, result, fields) {
+    if (err) throw err;
+    console.log(result);
+    if(result[0].ANSWER == req.body.qs1)
+    {
+      mark+=1;
+    }
+    if(result[1].ANSWER == req.body.qs2)
+    {
+      mark+=1;
+    }
+    if(result[2].ANSWER == req.body.qs3)
+    {
+      mark+=1;
+    }
+    if(result[3].ANSWER == req.body.qs4)
+    {
+      mark+=1;
+    }
+    if(result[4].ANSWER == req.body.qs5)
+    {
+      mark+=1;
+    }
+    console.log(mark);
+    res.render("result",{Mark:mark,Subject:"OS"});
+  });
+
+});
 app.listen(3002,function()
 {
     console.log("urc4u");

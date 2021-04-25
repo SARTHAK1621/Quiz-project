@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>e-Exam</title>
+  </head>
+  <link rel="preconnect" href="https://fonts.gstatic.com" />
+  <link rel="stylesheet" href="index.css" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Nerko+One&display=swap"
+    rel="stylesheet"
+  />
+  <style>
+    h1
+    {
+      margin-left: 30%;
+      margin-top: 4%;
+    }
+    form
+    {
+      margin-left: 5%;
+    }
+    h2
+    {
+      margin-left: 4%;
+      margin-top: 3%;
+    }
+    label
+    {
+      margin-left: 1%;
+    }
+    input
+    {
+      margin-left: 4%;
+    }
+    button
+    {
+      margin-left: 30%;
+      margin-top: 3%;
+      width: 10%;
+      height: 5%;
+      border-radius: 10%;
+    }
+  </style>
+  <body>
+    <h1>Data Base Management System</h1>
+    <form action="/dbmsanswer" method="POST">
+      <h2><%=qs1%> </h2>
+        <input type="radio" name="qs1" value="DataBase">
+        <label for="DataBase">DataBase</label>
+        <input type="radio"  name="qs1" value="Exel Sheet">
+        <label for="Excelsheet">Excelsheet</label>
+        <input type="radio" name="qs1" value="TextFile">
+        <label for="TextFile">TextFile</label>
+        <input type="radio" name="qs1" value="None">
+        <label for="None">None</label>
+      <h2><%=qs2%> </h2>
+        <input type="radio" name="qs2" value="DataBase">
+        <label for="DataBase">DataBase</label>
+        <input type="radio"  name="qs2" value="Database using DBMS principle">
+        <label for="Database using DBMS principle">Database using DBMS principle</label>
+        <input type="radio" name="qs2" value="TextFile">
+        <label for="TextFile">TextFile</label>
+        <input type="radio" name="qs2" value="None">
+        <label for="None">None</label>
+      <h2><%=qs3%> </h2>
+        <input type="radio" name="qs3" value="DDL">
+        <label for="DDL">DDL</label>
+        <input type="radio"  name="qs3" value="Database using DBMS principle">
+        <label for="Database using DBMS principle">Database using DBMS principle</label>
+        <input type="radio" name="qs3" value="TCL">
+        <label for="TCL">TCL</label>
+        <input type="radio" name="qs3" value="None">
+        <label for="None">None</label>
+      <h2><%=qs4%> </h2>
+        <input type="radio" name="qs4" value="DDL">
+        <label for="DDL">DDL</label>
+        <input type="radio"  name="qs4" value="Database using DBMS principle">
+        <label for="Database using DBMS principle">Database using DBMS principle</label>
+        <input type="radio" name="qs4" value="TCL">
+        <label for="TCL">TCL</label>
+        <input type="radio" name="qs4" value="Data">
+        <label for="Data">Data</label>
+      <h2><%=qs5%> </h2>
+        <input type="radio" name="qs5" value="DDL">
+        <label for="DDL">DDL</label>
+        <input type="radio"  name="qs5" value="Database using DBMS principle">
+        <label for="Database using DBMS principle">Database using DBMS principle</label>
+        <input type="radio" name="qs5" value="TCL">
+        <label for="TCL">TCL</label>
+        <input type="radio" name="qs5" value="Data Record">
+        <label for="Data Record">Data Record</label><br>
+      <button type="submit">Submit</button>
+      
+    </form>
+  </body>
+</html>

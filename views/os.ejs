@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>e-Exam</title>
+  </head>
+  <link rel="preconnect" href="https://fonts.gstatic.com" />
+  <link rel="stylesheet" href="index.css" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Nerko+One&display=swap"
+    rel="stylesheet"
+  />
+  <style>
+    h1
+    {
+      margin-left: 30%;
+    }
+    form
+    {
+      margin-left: 5%;
+    }
+    h2
+    {
+      margin-left: 4%;
+      margin-top: 3%;
+    }
+    label
+    {
+      margin-left: 1%;
+    }
+    input
+    {
+      margin-left: 4%;
+    }
+    button
+    {
+      margin-left: 30%;
+      margin-top: 3%;
+      width: 10%;
+      height: 5%;
+      border-radius: 10%;
+    }
+  </style>
+  <body>
+    <h1>Operating System</h1>
+    <form action="/osanswer" method="POST">
+      <h2><%=qs1%> </h2>
+        <input type="radio" name="qs1" value="9">
+        <label for="9">9</label>
+        <input type="radio"  name="qs1" value="8">
+        <label for="8">8</label>
+        <input type="radio" name="qs1" value="7">
+        <label for="7">7</label>
+        <input type="radio" name="qs1" value="None">
+        <label for="None">None</label>
+      <h2><%=qs2%> </h2>
+        <input type="radio" name="qs2" value="1950">
+        <label for="1950">1950</label>
+        <input type="radio"  name="qs2" value="1947">
+        <label for="1947">1947</label>
+        <input type="radio" name="qs2" value="1969">
+        <label for="1969">1969</label>
+        <input type="radio" name="qs2" value="None">
+        <label for="None">None</label>
+      <h2><%=qs3%> </h2>
+        <input type="radio" name="qs3" value="2020">
+        <label for="2020">2020</label>
+        <input type="radio"  name="qs3" value="1940">
+        <label for="1940">1940</label>
+        <input type="radio" name="qs3" value="1985">
+        <label for="1985">1985</label>
+        <input type="radio" name="qs3" value="None">
+        <label for="None">None</label>
+      <h2><%=qs4%> </h2>
+        <input type="radio" name="qs4" value="Shell">
+        <label for="Shell">Shell</label>
+        <input type="radio"  name="qs4" value="cmd">
+        <label for="cmd">CMD</label>
+        <input type="radio" name="qs4" value="TCL">
+        <label for="TCL">TCL</label>
+        <input type="radio" name="qs4" value="None">
+        <label for="None">None</label>
+      <h2><%=qs5%> </h2>
+        <input type="radio" name="qs5" value="DDL">
+        <label for="DDL">DDL</label>
+        <input type="radio"  name="qs5" value="File Allocation Table">
+        <label for="File Allocation Table">File Allocation Table</label>
+        <input type="radio" name="qs5" value="None">
+        <label for="None">None</label>
+        <input type="radio" name="qs5" value="Data Record">
+        <label for="Data Record">Data Record</label><br>
+      <button type="submit">Submit</button>
+      
+    </form>
+  </body>
+</html>
