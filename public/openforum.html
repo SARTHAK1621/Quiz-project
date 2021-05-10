@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Openforum</title>
+  </head>
+  <link rel="preconnect" href="https://fonts.gstatic.com" />
+  <link rel="stylesheet" href="index.css" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Nerko+One&display=swap"
+    rel="stylesheet"
+  />
+  <style>
+      form
+      {
+          margin-top: 10%;
+          margin-left: 30%;
+      }
+      form h1
+      {
+          margin-left: 20%;
+      }
+      .type
+      {
+          border-radius: 2%;
+      }
+      .type textarea
+      {
+          border-radius: 10%;
+          border-color: black;
+          border: 10%;
+      }
+      .query
+      {
+          margin-top: 3%;
+      }
+
+      form button
+      {
+          margin-left: 12%;
+          margin-top: 3%;
+          height: 40%;
+          width: 40%;
+          border: 10%;
+          border-radius: 10%;
+      }
+      
+  </style>
+  <body>
+    <header class="header">
+      <!-- Left box for logo -->
+      <div class="left">
+        <img src="logo4.png" alt="" />
+      </div>
+      <!-- mid box for nav bar -->
+     
+    </header>
+    
+       <form action="/openforum" method="POST">
+        <h1> Open Forum</h1>
+        <div class="type">
+            <h2>Query Topic</h2>
+            <textarea name="type" id="" cols="100" rows="2"></textarea>
+        </div>
+        <div class="query" >
+            <h2>Query</h2>
+            <textarea name="query" id="" cols="100" rows="10"></textarea>
+        </div>
+        <button>Submit</button>
+    
+    </form>
+
+       
+    </div>
+    
+    <script>
+      function myfunction()
+      {
+        var userid,password;
+        userid=document.getElementById("userid").value;
+        password=document.getElementById("password").value;
+        if(userid ==" " || password =="")
+        {
+          alert("All the field must be filled");
+        }
+      }
+      function myfunction1()
+      {
+        var userid,password;
+        userid=document.getElementById("userid").value;
+        password=document.getElementById("password").value;
+        if(userid ==" " || password =="")
+        {
+          alert("You have to log in first to access this features ");
+        }
+      }
+
+    </script>
+  </body>
+</html>

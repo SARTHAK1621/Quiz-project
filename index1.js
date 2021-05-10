@@ -251,6 +251,9 @@ app.post("/dbmsanswer",(req,res)=> {
   });
 
 })
+app.post("/openforum",(req,res)=>{
+  console.log(req.body);
+});
 app.post("/osanswer",(req,res)=> {
   console.log(req.body);
   var mark=0;
