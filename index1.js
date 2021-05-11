@@ -253,6 +253,12 @@ app.post("/dbmsanswer",(req,res)=> {
 })
 app.post("/openforum",(req,res)=>{
   console.log(req.body);
+  var sql = "INSERT INTO OPENFORUM (TYPE,QUERY) VALUES (' "+req.body.type+" ','"+req.body.query+"')";
+  con.query(sql, function (err, result) {
+    if (err) throw err;
+    console.log("1 record inserted");
+  });
+  res.render("welcomepage",{Name:name});
 });
 app.post("/osanswer",(req,res)=> {
   console.log(req.body);
